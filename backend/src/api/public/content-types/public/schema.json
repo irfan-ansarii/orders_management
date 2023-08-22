@@ -1,0 +1,70 @@
+{
+  "kind": "singleType",
+  "collectionName": "publics",
+  "info": {
+    "singularName": "public",
+    "pluralName": "publics",
+    "displayName": "public",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logoDark": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "authBg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "trackingBg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.navigation"
+    },
+    "footerLeft": {
+      "type": "string"
+    },
+    "footerRight": {
+      "type": "string"
+    },
+    "helpLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global.navigation"
+    },
+    "returnPeriod": {
+      "type": "integer"
+    }
+  }
+}

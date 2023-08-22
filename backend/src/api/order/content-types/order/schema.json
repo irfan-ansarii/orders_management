@@ -1,0 +1,119 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "orderId": {
+      "type": "string"
+    },
+    "orderDate": {
+      "type": "datetime"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "return",
+        "exchange"
+      ],
+      "default": "new"
+    },
+    "billingAddress": {
+      "type": "json"
+    },
+    "shippingAddress": {
+      "type": "json"
+    },
+    "paymentMode": {
+      "type": "enumeration",
+      "enum": [
+        "cod",
+        "prepaid",
+        "other"
+      ]
+    },
+    "platform": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::platform.platform"
+    },
+    "lineItems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::line-item.line-item",
+      "mappedBy": "order"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "orders"
+    },
+    "discountCodes": {
+      "type": "json"
+    },
+    "remittance": {
+      "type": "json"
+    },
+    "tracking": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order-status.order-status",
+      "mappedBy": "order"
+    },
+    "taxLines": {
+      "type": "json"
+    },
+    "subtotal": {
+      "type": "float"
+    },
+    "discountTotal": {
+      "type": "float"
+    },
+    "taxTotal": {
+      "type": "float"
+    },
+    "shippingTotal": {
+      "type": "float"
+    },
+    "total": {
+      "type": "float"
+    },
+    "outstandingTotal": {
+      "type": "float"
+    },
+    "courierCharge": {
+      "type": "float"
+    },
+    "note": {
+      "type": "text"
+    },
+    "currentStatus": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order-status.order-status"
+    },
+    "cancelledAt": {
+      "type": "datetime"
+    },
+    "cancelReason": {
+      "type": "string"
+    },
+    "fulfillmentOrders": {
+      "type": "json",
+      "private": true
+    }
+  }
+}

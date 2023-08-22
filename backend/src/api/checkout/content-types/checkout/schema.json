@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "checkouts",
+  "info": {
+    "singularName": "checkout",
+    "pluralName": "checkouts",
+    "displayName": "checkout",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "checkoutId": {
+      "type": "string"
+    },
+    "subtotal": {
+      "type": "float"
+    },
+    "discountTotal": {
+      "type": "float"
+    },
+    "taxTotal": {
+      "type": "float"
+    },
+    "shippingTotal": {
+      "type": "float"
+    },
+    "total": {
+      "type": "float"
+    },
+    "discountCodes": {
+      "type": "json"
+    },
+    "taxLines": {
+      "type": "json"
+    },
+    "billingAddress": {
+      "type": "json"
+    },
+    "shippingAddress": {
+      "type": "json"
+    },
+    "note": {
+      "type": "text"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "checkoutURL": {
+      "type": "text"
+    },
+    "recoveredAt": {
+      "type": "datetime"
+    },
+    "isRecovered": {
+      "type": "boolean",
+      "default": false
+    },
+    "lineItems": {
+      "type": "json"
+    },
+    "token": {
+      "type": "string"
+    }
+  }
+}

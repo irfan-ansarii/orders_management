@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_statuses",
+  "info": {
+    "singularName": "order-status",
+    "pluralName": "order-statuses",
+    "displayName": "orderStatus",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "confirmed",
+        "packed",
+        "in_transit",
+        "out_for_delivery",
+        "undelivered",
+        "delivered",
+        "lost",
+        "dispute",
+        "rto_initiated",
+        "rto_in_transit",
+        "rto_delivered",
+        "return_initiated",
+        "return_rejected",
+        "out_for_pickup",
+        "return_rescheduled",
+        "returned"
+      ]
+    },
+    "company": {
+      "type": "string"
+    },
+    "trackingNumber": {
+      "type": "string"
+    },
+    "rider": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "note": {
+      "type": "string"
+    },
+    "happenedAt": {
+      "type": "datetime"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::order.order",
+      "inversedBy": "tracking"
+    },
+    "edd": {
+      "type": "datetime"
+    },
+    "fulfillmentId": {
+      "type": "string"
+    },
+    "proof": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

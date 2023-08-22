@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "singularName": "message",
+    "pluralName": "messages",
+    "displayName": "message",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ref": {
+      "type": "string"
+    },
+    "refId": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "sent",
+        "scheduled",
+        "failed",
+        "cancelled"
+      ]
+    },
+    "sendAt": {
+      "type": "datetime"
+    },
+    "template": {
+      "type": "json"
+    }
+  }
+}

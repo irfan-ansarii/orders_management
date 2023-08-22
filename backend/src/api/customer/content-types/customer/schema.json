@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "singularName": "customer",
+    "pluralName": "customers",
+    "displayName": "customer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "addresses": {
+      "type": "json"
+    },
+    "notes": {
+      "type": "json"
+    },
+    "acceptsMarketing": {
+      "type": "boolean"
+    },
+    "verifiedEmail": {
+      "type": "boolean"
+    },
+    "isSpam": {
+      "type": "boolean"
+    },
+    "defaultAddress": {
+      "type": "json"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "customer"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "default": {
+    "colorBgLayout": "#f8f8fb",
+    "colorBorderSecondary": "#f0f0f0",
+    "fontFamily": "Inter",
+    "colorPrimary": "#eb2f96",
+    "colorSuccess": "#05b774",
+    "colorWarning": "#fadb14",
+    "colorText": "#595959",
+    "fontSize": 14,
+    "fontWeight": 500,
+    "sizeStep": 5,
+    "sizeUnit": 4,
+    "borderRadius": 4,
+    "fontSizeLG": 14
+  },
+  "dark": {
+    "colorBgLayout": "#0a0a0a",
+    "colorBorder": "#262626",
+    "colorBorderSecondary": "#1f1f1f",
+    "fontFamily": "Inter",
+    "colorPrimary": "#c41d7f",
+    "colorSuccess": "#05b774",
+    "colorWarning": "#fadb14",
+    "colorError": "#f5222d",
+    "colorText": "#dcdddd",
+    "fontSize": 14,
+    "fontWeight": 500,
+    "sizeStep": 5,
+    "sizeUnit": 4,
+    "borderRadius": 4,
+    "fontSizeLG": 14
+  }
+}

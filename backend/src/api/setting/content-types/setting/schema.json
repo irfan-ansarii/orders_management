@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "settings",
+  "info": {
+    "singularName": "setting",
+    "pluralName": "settings",
+    "displayName": "setting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quickAccess": {
+      "type": "component",
+      "repeatable": true,
+      "component": "global.quick-access"
+    },
+    "shiprocketApiEmail": {
+      "type": "email",
+      "private": true
+    },
+    "shiprocketApiPassword": {
+      "type": "string",
+      "private": true
+    },
+    "shiprocketToken": {
+      "type": "text",
+      "private": true
+    },
+    "shiprocketApiBaseURL": {
+      "type": "string"
+    },
+    "interaktApiToken": {
+      "type": "text",
+      "private": true
+    },
+    "interaktApiBaseURL": {
+      "type": "string"
+    }
+  }
+}

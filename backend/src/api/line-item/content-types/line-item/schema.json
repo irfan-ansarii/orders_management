@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "line_items",
+  "info": {
+    "singularName": "line-item",
+    "pluralName": "line-items",
+    "displayName": "lineItem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "variant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::variant.variant"
+    },
+    "name": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::order.order",
+      "inversedBy": "lineItems"
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "price": {
+      "type": "float"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "discount": {
+      "type": "float"
+    },
+    "tax": {
+      "type": "float"
+    },
+    "salePrice": {
+      "type": "float"
+    },
+    "variantName": {
+      "type": "string"
+    }
+  }
+}
