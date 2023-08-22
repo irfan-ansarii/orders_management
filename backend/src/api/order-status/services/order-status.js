@@ -309,7 +309,6 @@ module.exports = createCoreService(
           tracking_info: {
             company,
             number: trackingNumber,
-            url: `https://web.goldysnestt.com/tracking/${trackingNumber}`,
           },
         });
 
